@@ -24,7 +24,7 @@ class Diaporama{
     this.auto.addEventListener("click",() => this.playPause());
     this.next.addEventListener("click",() => this.nextImage());
   
-    // 
+    // On accède et écoute le bouton Ajouter
     this.btn = document.querySelector("header button");
     this.btn.addEventListener("click",()=>this.getValue());
     this.playPause();
@@ -56,13 +56,13 @@ class Diaporama{
     if(this.timer){
       clearInterval(this.timer);
       this.timer = null;
-      this.auto.innerHTML = "&#9205";
+      this.auto.innerHTML = "&#9205"; //bouton Play
     } else {
       this.timer = setInterval(this.nextImage.bind(this),1500);
       /* On utilise la méthode bind()pour accéder au this de la fonction nextImage()
       chaque fonction définissant son propre this
       On aurait aussi pu utiliser la fonction fléchée: setInterval(() => this.nextImage(),1500) qui permet d'accéder directement au contexte de la fonction appelée */
-      this.auto.innerHTML = "&#9208";
+      this.auto.innerHTML = "&#9208"; //bouton Pause
   }
 }
   // Quatrième fonction pour l'ajout de fichiers
