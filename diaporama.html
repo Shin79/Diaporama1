@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="description" content="diaporama"/>
+        <title>Diaporama</title>
+        <link rel="stylesheet" href="diaporama.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Diaporama</h1>
+            <label for="ajout"><h4>Ajouter une photo :  </h4></label>
+            <input type="file" id="ajout" name="ajout" accept=".png,.jpg"/>
+            <button name="ajouter">Ajouter</button> 
+        </header>
+        <main>
+            <div id="diaporama" class="diaporama">
+                <div class="elements">
+                    <div class="element">
+                    <figure>
+                        <img src="" alt="photo"/>
+                        <figcaption></figcaption>
+                    </figure>
+                    </div>
+                </div>
+                <div>
+                    <button class="precedent diapobtn" title="Précédent"> ⟨ </button>
+                    <button class="play-pause diapobtn" title="Play/Pause"> &#9205 </button>
+                    <button class="suivant diapobtn" title="Suivant"> ⟩ </button>
+                </div>
+            </div>
+        </main>
+        <script src="diaporama.js"></script>
+    </body>
+</html>
